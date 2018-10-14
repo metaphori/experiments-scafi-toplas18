@@ -310,9 +310,10 @@ class AdhocCloud extends AggregateProgram
   // UPDATABLE METRIC
   type Injecter[R] = () => Fun[R]
   def up[R](injecter: Injecter[R]): Fun[R] = rep(injecter()){ case f =>
-    val injfun = injecter()
-    val nbrfun = includingSelf.maxHoodSelector(nbr{ f.ver })(nbr{ f }).getOrElse(injfun)
-    if(injfun.ver > nbrfun.ver) injfun else nbrfun
+    //val injfun = injecter()
+    //val nbrfun = includingSelf.maxHoodSelector(nbr{ f.ver })(nbr{ f }).getOrElse(injfun)
+    //if(injfun.ver > nbrfun.ver) injfun else nbrfun
+    foldhood(injecter())((f1,f2) => if(f1.ver>=f2.ver) f1 else f2)(nbr{f})
   }
 
   implicit class RichFieldOps(fieldOps: FieldOps) {

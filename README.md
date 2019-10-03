@@ -89,9 +89,17 @@ $ ./plotter.py data fig12 history/fig12/plot.yml
 
 ## Pictures in the paper
 
+### Simulation scenario
+
 ![](imgs/sim-scenario1.png)
 
 ![](imgs/sim-scenario2.png)
+
+### Evaluation
+
+![](imgs/20181012_upmetric__023.png)
+
+![](imgs/20181012_upmetric3__023.png)
 
 ## Contacts
 

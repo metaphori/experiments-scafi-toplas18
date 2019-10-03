@@ -87,6 +87,12 @@ $ ./gradlew --no-daemon && \
 $ ./plotter.py data fig12 history/fig12/plot.yml
 ```
 
+## Pictures in the paper
+
+![](imgs/sim-scenario1.png)
+
+![](imgs/sim-scenario2.png)
+
 ## Contacts
 
 * Roberto Casadei: roby [dot] casadei [at] unibo [dot] it

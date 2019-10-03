@@ -91,11 +91,27 @@ $ ./plotter.py data fig12 history/fig12/plot.yml
 
 ### Simulation scenario
 
+Visual representation of the scenario, with two snapshots taken before and after a hot update of the metric.
+The big red squares represent leader nodes. Superimposed with any leader is a semi-transparent blue ball 
+whose intensity is proportional to the amount of resources available in the corresponding area. 
+Other nodes have a colour representing the gradient field towards leaders 
+(warmer, red-like colours for nodes close to the leader, and colder, green-like colours for peripheral nodes).
+The updated metric in the latter provides an overestimation of distances which results 
+ in smaller areas or, equivalently, in more cloudlets (and leaders).
+
 ![](imgs/sim-scenario1.png)
 
 ![](imgs/sim-scenario2.png)
 
 ### Evaluation
+
+These graphs show the load estimation capability at leader nodes,
+for different round-wise probabilities of leader failure 
+(leading to a disproportionate  number of failures (`150` to `250`) in the considered timespan). 
+The plots are obtained by taking the mean of `30` runs with different random seeds.
+The scenario is modelled as follows: the spikes of high load start at time `t=200` and `t=500`, 
+the new metric is injected at time `t=450`, and we can observe that, 
+ after such upgrade, the system is able to perform a much more precise estimation of CPU usage.
 
 ![](imgs/20181012_upmetric__023.png)
 
